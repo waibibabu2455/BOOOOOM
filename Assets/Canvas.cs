@@ -12,6 +12,8 @@ public class Canvas : MonoBehaviour
     public Text Number;
     public Text CatchEfficiency;
     public Text CombinationEfficiency;
+    public Text Name;
+    public Text OrganicValue;
     public Player Player;
     void Start()
     {
@@ -21,6 +23,8 @@ public class Canvas : MonoBehaviour
         Number.text = Player.Number.ToString();
         CatchEfficiency.text = Player.CatchEfficiency.ToString();
         CombinationEfficiency.text = Player.CombinationEfficiency.ToString();
+        Name.text = Player.Name.ToString();
+        OrganicValue.text = Player.OrganicValue.ToString();
     }
 
     // Update is called once per frame

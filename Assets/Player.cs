@@ -11,22 +11,24 @@ public class Player : MonoBehaviour
     public float Number;
     public float CatchEfficiency;
     public float CombinationEfficiency;
+    public float OrganicValue;
+    public string Name;
     public Player player;
     public Canvas canvas;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-    void UpdateConsumeValue(float value) 
-    { 
+    void UpdateConsumeValue(float value)
+    {
         this.ConsumeValue = value;
         this.canvas.UpdateText(canvas.ConsumeValue, value);
 
@@ -39,7 +41,7 @@ public class Player : MonoBehaviour
     }
     void UpdateNutritionValue(float value)
     {
-         this.ComplexValue = value;
+        this.ComplexValue = value;
         this.canvas.UpdateText(canvas.ComplexValue, value);
     }
     void UpdateNumber(float value)
@@ -56,5 +58,10 @@ public class Player : MonoBehaviour
     {
         this.CombinationEfficiency = value;
         this.canvas.UpdateText(canvas.CombinationEfficiency, value);
+    }
+    private void UpdateOrganicValue(float value)
+    {
+        this.OrganicValue = value;
+        this.canvas.UpdateText(canvas.OrganicValue, value);
     }
 }
