@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class NextRound : ButtonUIBase
 {
+    GameObject stateManager;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        stateManager = GameObject.Find("RoundManager");
+    }
+
     public override void Click()
     {
-        PlayerAttribute.Instance.score += PlayerAttribute.Instance.getScore;
+        stateManager.GetComponent<RoundStateMachine>().NextRound();
     }
 }

@@ -5,16 +5,29 @@ using UnityEngine;
 public class PlayerAttribute : MonoBehaviour
 {
     public static PlayerAttribute Instance;
-    public string raceName { get { return Instance.raceName; } }
+    [Header("种族名")]
+    public string raceName;
+    [Header("有机质点数")]
     public int score;
-    public int consume;
+    [Header("消耗点数")]
+    public int consume; 
+    [Header("个体数量")]
     public int number;
-    public int getScore = 1;
+    public int getScore => preyOn + compound;
+    [Header("捕食")]
+    public int preyOn;
+    [Header("化合")]
+    public int compound;
+    [Header("脂肪")]
+    public int fat;
 
     private void Awake()
     {
-        Instance = this; 
+        Instance = this;
+        number = 1;
+        preyOn = 0;
+        compound = 1;
+        score = 10;
+        fat = 1;
     }
-
-
 }

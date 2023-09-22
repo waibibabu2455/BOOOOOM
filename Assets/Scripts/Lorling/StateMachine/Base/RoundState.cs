@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RoundState : IState
+public class RoundState : ScriptableObject, IState
 {
-    public void Initialize()
-    {
+    protected RoundStateMachine stateMachine;
 
+    public void Initialize(RoundStateMachine stateMachine)
+    {
+        this.stateMachine = stateMachine;
     }
 
     public virtual void Enter()

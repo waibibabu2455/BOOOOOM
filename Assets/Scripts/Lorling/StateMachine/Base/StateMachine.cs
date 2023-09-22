@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StateMachine : MonoBehaviour
 {
-    IState currentState;
+    protected IState currentState;
 
     protected Dictionary<System.Type, IState> stateTable;
 
@@ -21,7 +21,6 @@ public class StateMachine : MonoBehaviour
 
     protected void SwitchState(IState newState)
     {
-        currentState.Exit();
         SwitchOn(newState);
     }
 
