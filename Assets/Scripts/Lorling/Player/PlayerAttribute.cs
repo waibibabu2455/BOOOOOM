@@ -1,24 +1,24 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAttribute : MonoBehaviour
 {
     public static PlayerAttribute Instance;
-    [Header("ÖÖ×åÃû")]
+    [Header("Ã–Ã–Ã—Ã¥ÃƒÃ»")]
     public string raceName;
-    [Header("ÓĞ»úÖÊµãÊı")]
+    [Header("å¾—åˆ†")]
     public int score;
-    [Header("ÏûºÄµãÊı")]
+    [Header("ÃÃ»ÂºÃ„ÂµÃ£ÃŠÃ½")]
     public int consume; 
-    [Header("¸öÌåÊıÁ¿")]
+    [Header("ç§ç¾¤æ•°é‡")]
     public int number;
     public int getScore => preyOn + compound;
-    [Header("²¶Ê³")]
+    [Header("Â²Â¶ÃŠÂ³")]
     public int preyOn;
-    [Header("»¯ºÏ")]
+    [Header("Â»Â¯ÂºÃ")]
     public int compound;
-    [Header("Ö¬·¾")]
+    [Header("è„‚è‚ªå€¼")]
     public int fat;
 
     private void Awake()

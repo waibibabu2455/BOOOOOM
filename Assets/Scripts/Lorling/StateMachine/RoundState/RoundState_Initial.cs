@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,7 +15,7 @@ public class RoundState_Initial : RoundState
         else if (random < 80) eventCount = 2;
         else eventCount = 3;
 
-        // TODO::´ÓÊÂ¼þ³ØÖÐ¶ÁÈ¡ÊÂ¼þ
+        // TODO::ä»Žäº‹ä»¶æ± ä¸­è¯»å–äº‹ä»¶
     }
 
     public override void Exit()
