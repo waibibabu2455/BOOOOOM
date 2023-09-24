@@ -9,17 +9,26 @@ public class PlayerAttribute : MonoBehaviour
     public string raceName;
     [Header("有机质点数")]
     public int score;
-    [Header("消耗点数")]
-    public int consume; 
+    // 消耗点数
+    public int consume => evolutionCount * (speed / 2 + complexity);
     [Header("个体数量")]
     public int number;
-    public int getScore => preyOn + compound;
+    // 每回合获得的有机质点数
+    public int getScore => evolutionCount * (preyOn + compound);
     [Header("捕食")]
     public int preyOn;
     [Header("化合")]
     public int compound;
-    [Header("脂肪")]
-    public int fat;
+    // 脂肪
+    public int fat => evolutionCount;
+    [Header("器官数量")]
+    public int organCount;
+    // 复杂度
+    public int complexity => organCount;
+    [Header("速度")]
+    public int speed;
+    [Header("进化次数")]
+    public int evolutionCount;
 
     private void Awake()
     {
@@ -28,6 +37,9 @@ public class PlayerAttribute : MonoBehaviour
         preyOn = 0;
         compound = 1;
         score = 10;
-        fat = 1;
+        evolutionCount = 1;
+        speed = 1;
+        organCount = 0;
+        raceName = "咕舟";
     }
 }
