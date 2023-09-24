@@ -15,17 +15,6 @@ public class Event : MonoBehaviour
         this.effectLib = effectlib;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void effect() {
         effectLib.effect(id);
     }
