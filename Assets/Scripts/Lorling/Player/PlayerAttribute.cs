@@ -1,45 +1,51 @@
-ï»¿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAttribute : MonoBehaviour
 {
     public static PlayerAttribute Instance;
-    [Header("ç§æ—å")]
-    public string raceName;
-    [Header("å¾—åˆ†")]
-    public int score;
-    // æ¯å›žåˆæ¶ˆè€—ç‚¹æ•°
-    public int consume => evolutionCount * (speed / 2 + complexity);
-    [Header("ç§æ—ä¸ªä½“æ•°é‡")]
-    public int number;
-    // æ¯å›žåˆèŽ·å¾—åˆ†æ•°
+    [Header("ÖÖ×åÃû")]
+    [HideInInspector]
+    public string raceName = "¹¾ÖÛ";
+    [Header("ÓÐ»úÖÊµãÊý")]
+    [HideInInspector]
+    public int score = 10;
+    [Header("¸öÌåÊýÁ¿")]
+    [HideInInspector]
+    public int number = 1;
+    [Header("²¶Ê³")]
+    [HideInInspector]
+    public int preyOn = 1;
+    [Header("»¯ºÏ")]
+    [HideInInspector]
+    public int compound = 1;
+    [Header("Æ÷¹ÙÊýÁ¿")]
+    [HideInInspector]
+    public int organCount = 0;
+    [Header("ËÙ¶È")]
+    [HideInInspector]
+    public int speed = 1;
+    [Header("½ø»¯´ÎÊý")]
+    [HideInInspector]
+    public int evolutionCount = 1;
+    // ºÃÊÂ¼þ³äÄÜ½ø¶È
+    [HideInInspector]
+    public int goodSchedule = 0;
+    public bool canGoodEvent = false;
+    // Ã¿»ØºÏ»ñµÃµÄÓÐ»úÖÊµãÊý
     public int getScore => evolutionCount * (preyOn + compound);
-    [Header("æ•é£Ÿ")]
-    public int preyOn;
-    [Header("åŒ–åˆ")]
-    public int compound;
-    // è„‚è‚ªå€¼
-    public int fat => evolutionCount;
-    [Header("å™¨å®˜æ•°é‡")]
-    public int organCount;
-    // å¤æ‚åº¦
+    // ÏûºÄµãÊý
+    public int consume => evolutionCount * (speed / 2 + complexity);
+    // ¸´ÔÓ¶È
     public int complexity => organCount;
-    [Header("é€Ÿåº¦")]
-    public int speed;
-    [Header("è¿›åŒ–æ¬¡æ•°")]
-    public int evolutionCount;
+    // Ö¬·¾
+    public int fat => evolutionCount;
 
     private void Awake()
     {
         Instance = this;
-        number = 1;
-        preyOn = 0;
-        compound = 1;
-        score = 10;
-        evolutionCount = 1;
-        speed = 1;
-        organCount = 0;
-        raceName = "å’•èˆŸ";
+
+        DontDestroyOnLoad(this);
     }
 }

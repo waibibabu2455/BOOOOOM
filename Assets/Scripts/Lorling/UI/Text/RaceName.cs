@@ -6,6 +6,6 @@ public class RaceName : TextUIBase
 {
     protected override void DateUpdate()
     {
-        text.text = PlayerAttribute.Instance.raceName.ToString();
+        text.text = PlayerAttribute.Instance.raceName;
     }
 }
