@@ -5,7 +5,7 @@ using UnityEngine;
 public class EffectLib
 {
     // Start is called before the first frame update
-    public void effect(int id) { 
+    public virtual void effect(int id) { 
         switch (id) { 
         
         case 0:

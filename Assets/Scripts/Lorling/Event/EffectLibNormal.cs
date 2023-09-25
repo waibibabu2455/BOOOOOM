@@ -5,7 +5,7 @@ using UnityEngine;
 public class EffectLibNormal : EffectLib
 {
     // Start is called before the first frame update
-    public void effect(int id)
+    public override void effect(int id)
     {
         switch (id)
         {
@@ -13,16 +13,16 @@ public class EffectLibNormal : EffectLib
             case 0:
                 return;
             case 1:
-                Debug.Log("case1");
+                Debug.Log("case1normal");
                 return;
             case 2:
-                Debug.Log("case2");
+                Debug.Log("case2normal");
                 return;
             case 3:
-                Debug.Log("case3");
+                Debug.Log("case3normal");
                 return;
             case 4:
-                Debug.Log("case4");
+                Debug.Log("case4normal");
                 return;
         }
     }
