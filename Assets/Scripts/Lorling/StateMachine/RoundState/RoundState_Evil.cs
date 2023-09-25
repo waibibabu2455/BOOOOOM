@@ -22,8 +22,8 @@ public class RoundState_Evil : RoundState
 
         // TODO::从事件池中读取事件
         if (isAppear) {
-            int randomid= Random.Range(1, ReadCsv("Assets/Scripts/Lorling/Database/Bad.csv").Count);
-            string[] eventstring = ReadCsv("Assets/Scripts/Lorling/Database/Bad.csv")[randomid];
+            int randomid= Random.Range(1, ReadCsv("Assets/Resources/Database/Bad.csv").Count);
+            string[] eventstring = ReadCsv("Assets/Resources/Database/Bad.csv")[randomid];
             Event GeneratedEvent = new Event(System.Int32.Parse(eventstring[0]), eventstring[1], effectLib);
             GeneratedEvent.effect();
         }
