@@ -19,8 +19,8 @@ public class RoundState_Initial : RoundState
         // TODO::从事件池中读取事件
 
         EffectLibNormal effectLib = new EffectLibNormal();
-        int randomid = Random.Range(1, ReadCsv("Assets/Scripts/Lorling/Database/Normal.csv").Count);
-        string[] eventstring = ReadCsv("Assets/Scripts/Lorling/Database/Normal.csv")[randomid];
+        int randomid = Random.Range(1, ReadCsv("Assets/Resources/Database/Normal.csv").Count);
+        string[] eventstring = ReadCsv("Assets/Resources/Database/Normal.csv")[randomid];
         Event GeneratedEvent = new Event(System.Int32.Parse(eventstring[0]), eventstring[1], effectLib);
         GeneratedEvent.effect();
     }
