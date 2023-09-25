@@ -1,25 +1,25 @@
-using Unity.VisualScripting;
+锘縰sing Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// UI基类
+/// UI鍩虹被
 /// </summary>
 public class UIBase : MonoBehaviour
 {
-    // 显示
+    // 鏄剧ず
     public virtual void Show()
     {
         gameObject.SetActive(true);
     }
 
-    // 隐藏
+    // 闅愯棌
     public virtual void Hide()
     {
         gameObject.SetActive(false);
     }
 
-    // 关闭
+    // 鍏抽棴
     public virtual void Close()
     {
         Destroy(gameObject);

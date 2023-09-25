@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +6,6 @@ public class RaceCount : TextUIBase
 {
     protected override void DateUpdate()
     {
-        text.text = "ÖÖ×å¸öÌåÊıÁ¿£º" + PlayerAttribute.Instance.number.ToString();
+        text.text = "ç§æ—ä¸ªä½“æ•°é‡ï¼š" + PlayerAttribute.Instance.number.ToString();
     }
 }

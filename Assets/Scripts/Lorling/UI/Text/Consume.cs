@@ -1,4 +1,4 @@
-using System.Collections;
+锘縰sing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +6,6 @@ public class Consume : TextUIBase
 {
     protected override void DateUpdate()
     {
-        text.text = "本回合预计消耗：" + PlayerAttribute.Instance.consume.ToString();
+        text.text = "鏈洖鍚堥璁℃秷鑰楋細" + PlayerAttribute.Instance.consume.ToString();
     }
 }
