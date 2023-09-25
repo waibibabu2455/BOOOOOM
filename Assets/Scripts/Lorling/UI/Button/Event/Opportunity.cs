@@ -1,4 +1,4 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +10,7 @@ public class Opportunity : ButtonUIBase
         {
             PlayerAttribute.Instance.canGoodEvent = false;
             PlayerAttribute.Instance.goodSchedule = 0;
-            // TODO:∫√ ¬º˛¥•∑¢
+            // TODO:Â•Ω‰∫ã‰ª∂Ëß¶Âèë
 
         }
     }

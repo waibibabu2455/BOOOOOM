@@ -1,4 +1,4 @@
-using System.Collections;
+锘縰sing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +6,6 @@ public class GetScore : TextUIBase
 {
     protected override void DateUpdate()
     {
-        text.text = "本回合预计收入：" + PlayerAttribute.Instance.getScore.ToString();
+        text.text = "鏈洖鍚堥璁℃敹鍏ワ細" + PlayerAttribute.Instance.getScore.ToString();
     }
 }

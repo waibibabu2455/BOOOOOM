@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,7 +25,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    // ��ʾ UI
+    // 显示 UI
     public void ShowUI<T>(string uiName) where T : UIBase
     {
         if (!uiTable.ContainsKey(uiName))

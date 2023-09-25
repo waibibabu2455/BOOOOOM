@@ -1,45 +1,45 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAttribute : MonoBehaviour
 {
     public static PlayerAttribute Instance;
-    [Header("ÖÖ×åÃû")]
+    [Header("ç§æ—å")]
     [HideInInspector]
-    public string raceName = "¹¾ÖÛ";
-    [Header("ÓÐ»úÖÊµãÊý")]
+    public string raceName = "å’•èˆŸ";
+    [Header("æœ‰æœºè´¨ç‚¹æ•°")]
     [HideInInspector]
     public int score = 10;
-    [Header("¸öÌåÊýÁ¿")]
+    [Header("ä¸ªä½“æ•°é‡")]
     [HideInInspector]
     public int number = 1;
-    [Header("²¶Ê³")]
+    [Header("æ•é£Ÿ")]
     [HideInInspector]
     public int preyOn = 1;
-    [Header("»¯ºÏ")]
+    [Header("åŒ–åˆ")]
     [HideInInspector]
     public int compound = 1;
-    [Header("Æ÷¹ÙÊýÁ¿")]
+    [Header("å™¨å®˜æ•°é‡")]
     [HideInInspector]
     public int organCount = 0;
-    [Header("ËÙ¶È")]
+    [Header("é€Ÿåº¦")]
     [HideInInspector]
     public int speed = 1;
-    [Header("½ø»¯´ÎÊý")]
+    [Header("è¿›åŒ–æ¬¡æ•°")]
     [HideInInspector]
     public int evolutionCount = 1;
-    // ºÃÊÂ¼þ³äÄÜ½ø¶È
+    // å¥½äº‹ä»¶å……èƒ½è¿›åº¦
     [HideInInspector]
     public int goodSchedule = 0;
     public bool canGoodEvent = false;
-    // Ã¿»ØºÏ»ñµÃµÄÓÐ»úÖÊµãÊý
+    // æ¯å›žåˆèŽ·å¾—çš„æœ‰æœºè´¨ç‚¹æ•°
     public int getScore => evolutionCount * (preyOn + compound);
-    // ÏûºÄµãÊý
+    // æ¶ˆè€—ç‚¹æ•°
     public int consume => evolutionCount * (speed / 2 + complexity);
-    // ¸´ÔÓ¶È
+    // å¤æ‚åº¦
     public int complexity => organCount;
-    // Ö¬·¾
+    // è„‚è‚ª
     public int fat => evolutionCount;
 
     private void Awake()
