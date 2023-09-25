@@ -15,6 +15,11 @@ public class RoundState_Evil : RoundState
         random = Mathf.Abs((int)Random.value % 10);
         isAppear = (random == 0);
 
+        // 好事件充能
+        random = Mathf.Abs((int)Random.value % 10);
+        PlayerAttribute.Instance.goodSchedule = Mathf.Min(100, PlayerAttribute.Instance.goodSchedule + ((random == 0) ? 10 : 0));
+        PlayerAttribute.Instance.canGoodEvent = PlayerAttribute.Instance.goodSchedule == 100;
+
         // TODO::从事件池中读取事件
         if (isAppear) {
             int randomid= (Random.Range(1, ReadCsv("Assets/Scripts/Lorling/Database/Bad.csv").Count));

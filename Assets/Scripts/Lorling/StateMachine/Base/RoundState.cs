@@ -25,4 +25,9 @@ public class RoundState : ScriptableObject, IState
     {
 
     }
+
+    public virtual void SetButton(ButtonUIBase button)
+    {
+
+    }
 }

@@ -6,40 +6,46 @@ public class PlayerAttribute : MonoBehaviour
 {
     public static PlayerAttribute Instance;
     [Header("种族名")]
-    public string raceName;
+    [HideInInspector]
+    public string raceName = "咕舟";
     [Header("有机质点数")]
-    public int score;
-    // 消耗点数
-    public int consume => evolutionCount * (speed / 2 + complexity);
+    [HideInInspector]
+    public int score = 10;
     [Header("个体数量")]
-    public int number;
+    [HideInInspector]
+    public int number = 1;
+    [Header("捕食")]
+    [HideInInspector]
+    public int preyOn = 1;
+    [Header("化合")]
+    [HideInInspector]
+    public int compound = 1;
+    [Header("器官数量")]
+    [HideInInspector]
+    public int organCount = 0;
+    [Header("速度")]
+    [HideInInspector]
+    public int speed = 1;
+    [Header("进化次数")]
+    [HideInInspector]
+    public int evolutionCount = 1;
+    // 好事件充能进度
+    [HideInInspector]
+    public int goodSchedule = 0;
+    public bool canGoodEvent = false;
     // 每回合获得的有机质点数
     public int getScore => evolutionCount * (preyOn + compound);
-    [Header("捕食")]
-    public int preyOn;
-    [Header("化合")]
-    public int compound;
-    // 脂肪
-    public int fat => evolutionCount;
-    [Header("器官数量")]
-    public int organCount;
+    // 消耗点数
+    public int consume => evolutionCount * (speed / 2 + complexity);
     // 复杂度
     public int complexity => organCount;
-    [Header("速度")]
-    public int speed;
-    [Header("进化次数")]
-    public int evolutionCount;
+    // 脂肪
+    public int fat => evolutionCount;
 
     private void Awake()
     {
         Instance = this;
-        number = 1;
-        preyOn = 0;
-        compound = 1;
-        score = 10;
-        evolutionCount = 1;
-        speed = 1;
-        organCount = 0;
-        raceName = "咕舟";
+
+        DontDestroyOnLoad(this);
     }
 }

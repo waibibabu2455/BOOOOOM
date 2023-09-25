@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class StateMachine : MonoBehaviour
 {
-    protected IState currentState;
+    protected RoundState currentState;
 
-    protected Dictionary<System.Type, IState> stateTable;
+    protected Dictionary<System.Type, RoundState> stateTable;
 
     private void Update()
     {
         currentState.Update();
     }
 
-    protected void SwitchOn(IState newState)
+    protected void SwitchOn(RoundState newState)
     {
         currentState = newState;
         currentState.Enter();
     }
 
-    protected void SwitchState(IState newState)
+    protected void SwitchState(RoundState newState)
     {
         SwitchOn(newState);
     }
