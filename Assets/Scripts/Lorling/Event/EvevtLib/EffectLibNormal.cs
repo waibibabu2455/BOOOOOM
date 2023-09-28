@@ -24,6 +24,24 @@ public class EffectLibNormal : EffectLib
             case 4:
                 Debug.Log("case4normal");
                 return;
+            case 5:
+                Debug.Log("case5normal");
+                return;
+            case 6:
+                Debug.Log("case6normal");
+                return;
+            case 7:
+                Debug.Log("case7normal");
+                return;
+            case 8:
+                Debug.Log("case8normal");
+                return;
+            case 9:
+                Debug.Log("case9normal");
+                return;
+            case 10:
+                Debug.Log("case10normal");
+                return;
         }
     }
 }

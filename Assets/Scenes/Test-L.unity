@@ -2312,6 +2312,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e1d6eff5cceee9649bc62d8d1c388b81, type: 2}
   - {fileID: 11400000, guid: b039333546e10a141bc5b20145c78c9b, type: 2}
   - {fileID: 11400000, guid: 5e93dfe3f83d35643aac5bdc3d07418f, type: 2}
+  Player: {fileID: 1712888914}
+  EventListGood: []
+  EventListBad: []
+  EventListNormal: []
 --- !u!4 &938829115
 Transform:
   m_ObjectHideFlags: 0
@@ -3854,8 +3858,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 81, y: -16}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 100.95001, y: -16}
+  m_SizeDelta: {x: 199.9, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1543391615
 MonoBehaviour:
@@ -4637,8 +4641,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 99.6, y: -47.2}
-  m_SizeDelta: {x: 200, y: 30}
+  m_AnchoredPosition: {x: 100.25, y: -47.199997}
+  m_SizeDelta: {x: 201.3, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1706872207
 MonoBehaviour:

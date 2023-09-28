@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EffectLibGood : EffectLib
+public class EffectLibBad : EffectLib
 {
     // Start is called before the first frame update
-    public void effect(int id)
+    public override void effect(int id)
     {
         switch (id)
         {
@@ -13,16 +13,19 @@ public class EffectLibGood : EffectLib
             case 0:
                 return;
             case 1:
-                Debug.Log("case1");
+                Debug.Log("case1bad");
                 return;
             case 2:
-                Debug.Log("case2");
+                Debug.Log("case2bad");
                 return;
             case 3:
-                Debug.Log("case3");
+                Debug.Log("case3bad");
                 return;
             case 4:
-                Debug.Log("case4");
+                Debug.Log("case4bad");
+                return;
+            case 5:
+                Debug.Log("case5bad");
                 return;
         }
     }
