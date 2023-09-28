@@ -12,7 +12,6 @@ public class RoundState_Evil : RoundState
 
     public override void Enter()
     {   
-        EffectLibBad effectLib= new EffectLibBad();
         random = Mathf.Abs((int)Random.value % 10);
         isAppear = (random == 0);
 

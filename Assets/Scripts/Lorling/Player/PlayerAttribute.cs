@@ -10,13 +10,15 @@ public class PlayerAttribute : MonoBehaviour
     [Header("有机质点数")]
     public double score = 10;
     [Header("个体数量")]
-    public int number = 1;
+    public double number = 10;
     [Header("捕食")]
-    public int preyOn = 1;
+    public double preyOn = 1;
     [Header("化合")]
-    public int compound = 1;
+    public double compound = 1;
     [Header("器官数量")]
     public int organCount = 0;
+    [Header("器官")]
+    public List<Organ> organList = new List<Organ>();
     [Header("速度")]
     public int speed = 1;
     [Header("进化次数")]

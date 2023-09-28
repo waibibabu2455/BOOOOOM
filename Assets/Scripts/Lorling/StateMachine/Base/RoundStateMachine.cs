@@ -23,21 +23,21 @@ public class RoundStateMachine : StateMachine
         }
 
         //事件池生成
-        EffectLibNormal effectLibNormal = new EffectLibNormal();
+        EffectLibNormal effectLibNormal = new EffectLibNormal(this);
         for (int i = 1; i <= ReadCsv("Assets/Resources/Database/Normal.csv").Count - 1; i++)
         {
             string[] eventstring = ReadCsv("Assets/Resources/Database/Normal.csv")[i];
             Event GeneratedEvent = new Event(System.Int32.Parse(eventstring[0]), eventstring[1], effectLibNormal, System.Int32.Parse(eventstring[4]));
             EventListNormal.Add(GeneratedEvent);
         }
-        EffectLibGood effectLibGood = new EffectLibGood();
+        EffectLibGood effectLibGood = new EffectLibGood(this);
         for (int i = 1; i <= ReadCsv("Assets/Resources/Database/Good.csv").Count - 1; i++)
         {
             string[] eventstring = ReadCsv("Assets/Resources/Database/Good.csv")[i];
             Event GeneratedEvent = new Event(System.Int32.Parse(eventstring[0]), eventstring[1], effectLibGood, System.Int32.Parse(eventstring[4]));
             EventListGood.Add(GeneratedEvent);
         }
-        EffectLibBad effectLibBad = new EffectLibBad();
+        EffectLibBad effectLibBad = new EffectLibBad(this);
         for (int i = 1; i <= ReadCsv("Assets/Resources/Database/Bad.csv").Count - 1; i++)
         {
             string[] eventstring = ReadCsv("Assets/Resources/Database/Bad.csv")[i];

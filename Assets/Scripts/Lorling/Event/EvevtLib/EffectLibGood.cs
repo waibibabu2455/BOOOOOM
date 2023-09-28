@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EffectLibGood : EffectLib
 {
+    public EffectLibGood(RoundStateMachine roundStateMachine) : base(roundStateMachine)
+    {
+    }
     // Start is called before the first frame update
     public override void effect(int id)
     {
