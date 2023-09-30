@@ -40,6 +40,8 @@ public class EffectLibBad : EffectLib
                 Debug.Log("case4bad");
                 return;
             case 5:
+                RoundStateMachine.Player.score-= RoundStateMachine.Player.number;
+                RoundStateMachine.Player.number +=1;
                 Debug.Log("case5bad");
                 return;
         }

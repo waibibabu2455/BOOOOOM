@@ -6,6 +6,6 @@ public class OrganicMatterPoint : TextUIBase
 {
     protected override void DateUpdate()
     {
-        text.text = "得分" + PlayerAttribute.Instance.score.ToString();
+        text.text = "有机质点数" + PlayerAttribute.Instance.score.ToString();
     }
 }

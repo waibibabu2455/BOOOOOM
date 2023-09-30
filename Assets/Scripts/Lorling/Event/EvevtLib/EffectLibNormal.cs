@@ -22,6 +22,7 @@ public class EffectLibNormal : EffectLib
                 Debug.Log("case1normal");
                 return;
             case 2:
+                this.RoundStateMachine.Player.preyOn *= 2;
                 Debug.Log("case2normal");
                 return;
             case 3:
@@ -65,6 +66,7 @@ public class EffectLibNormal : EffectLib
                 Debug.Log("case9normal");
                 return;
             case 10:
+                this.RoundStateMachine.Player.preyOn -= 3;
                 Debug.Log("case10normal");
                 return;
         }

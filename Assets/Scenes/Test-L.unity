@@ -2397,10 +2397,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e1d6eff5cceee9649bc62d8d1c388b81, type: 2}
   - {fileID: 11400000, guid: b039333546e10a141bc5b20145c78c9b, type: 2}
   - {fileID: 11400000, guid: 5e93dfe3f83d35643aac5bdc3d07418f, type: 2}
+  - {fileID: 11400000, guid: db1860f53cf99b74592a3fb005e54200, type: 2}
   Player: {fileID: 850982229}
   EventListGood: []
   EventListBad: []
   EventListNormal: []
+  EffectedEvent: []
 --- !u!4 &938829115
 Transform:
   m_ObjectHideFlags: 0
@@ -3051,7 +3053,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u4E0B\u4E00\u56DE\u5408\n"
+  m_Text: "\u4E0B\u4E00\u9636\u6BB5\n"
 --- !u!222 &1141801229
 CanvasRenderer:
   m_ObjectHideFlags: 0
