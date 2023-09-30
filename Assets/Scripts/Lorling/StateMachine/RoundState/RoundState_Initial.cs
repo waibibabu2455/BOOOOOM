@@ -18,9 +18,24 @@ public class RoundState_Initial : RoundState
     {
 
         // TODO::从事件池中读取事件
-        int randomid = Random.Range(0, stateMachine.EventListNormal.Count()-1);
-        stateMachine.EffectedEvent.Add(stateMachine.EventListNormal[randomid]);
-
+        random = Random.Range(0, 100);
+        if (random<=20) {
+            eventCount = 1;
+        }
+        if (random>20 && random<=80) {
+            eventCount = 2;    
+        }
+        if (random > 80) { 
+            eventCount = 3;
+        }
+        while (eventCount>0) {
+            int randomid = Random.Range(0, stateMachine.EventListNormal.Count() - 1);
+            if (stateMachine.EffectedEvent.Contains(stateMachine.EventListNormal[randomid]) == false)
+            {
+                stateMachine.EffectedEvent.Add(stateMachine.EventListNormal[randomid]);
+            }
+            eventCount-=1;
+        }
 
     }
 

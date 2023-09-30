@@ -12,6 +12,7 @@ public class RoundStateMachine : StateMachine
     public List<Event> EventListBad;
     public List<Event> EventListNormal;
     public List<Event> EffectedEvent;
+    public List<Organ> OrganPool;
 
     private void Awake()
     {
@@ -44,6 +45,13 @@ public class RoundStateMachine : StateMachine
             string[] eventstring = ReadCsv("Assets/Resources/Database/Bad.csv")[i];
             Event GeneratedEvent = new Event(System.Int32.Parse(eventstring[0]), eventstring[1], effectLibBad, System.Int32.Parse(eventstring[4]));
             EventListBad.Add(GeneratedEvent);
+        }
+        OrganLib organLib = new OrganLib();
+        for (int i = 1; i <= ReadCsv("Assets/Resources/Database/Organ.csv").Count - 1; i++)
+        {
+            string[] eventstring = ReadCsv("Assets/Resources/Database/Organ.csv")[i];
+            Organ organ=new Organ(System.Int32.Parse(eventstring[0]), eventstring[1], System.Int32.Parse(eventstring[2]), eventstring[3], System.Int32.Parse(eventstring[5]),organLib);
+            OrganPool.Add(organ);
         }
     }
 

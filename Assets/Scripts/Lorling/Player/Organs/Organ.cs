@@ -4,7 +4,21 @@ using UnityEngine;
 
 public class Organ : MonoBehaviour
 {
+    public int Organid;
     public string OrganName;
+    public int Complexity;
+    public string Description;
+    public int Refund;
+    public OrganLib organLib;
+    public Organ(int Organid, string OrganName, int Complexity, string Description, int Refund, OrganLib organLib) { 
+        this.Organid = Organid; 
+        this.OrganName = OrganName;
+        this.Complexity = Complexity;
+        this.Description = Description;
+        this.Refund = Refund;
+        this.organLib = organLib;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,4 +30,8 @@ public class Organ : MonoBehaviour
     {
         
     }
+    public virtual void OrganEffect() {
+        organLib.effect(this.Organid);
+    }
+    
 }

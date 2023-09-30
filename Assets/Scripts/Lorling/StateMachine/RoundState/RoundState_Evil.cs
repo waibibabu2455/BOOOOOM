@@ -12,8 +12,6 @@ public class RoundState_Evil : RoundState
 
     public override void Enter()
     {   
-        random = Mathf.Abs((int)Random.value % 10);
-        isAppear = (random == 0);
 
         // 好事件充能
         random = Mathf.Abs((int)Random.value % 10);
@@ -21,8 +19,12 @@ public class RoundState_Evil : RoundState
         PlayerAttribute.Instance.canGoodEvent = PlayerAttribute.Instance.goodSchedule == 100;
 
         // TODO::从事件池中读取事件
-        int randomid = Random.Range(0, stateMachine.EventListBad.Count()-1);
-        stateMachine.EffectedEvent.Add(stateMachine.EventListBad[randomid]);
+        int randomproperty = Random.Range(0, 100);
+        if (randomproperty >= 90)
+        {
+            int randomid = Random.Range(0, stateMachine.EventListBad.Count() - 1);
+            stateMachine.EffectedEvent.Add(stateMachine.EventListBad[randomid]);
+        }
 
 
     }
