@@ -19,7 +19,7 @@ public class RoundState_Initial : RoundState
 
         // TODO::从事件池中读取事件
         int randomid = Random.Range(0, stateMachine.EventListNormal.Count()-1);
-        stateMachine.EventListNormal[randomid].effect();
+        stateMachine.EffectedEvent.Add(stateMachine.EventListNormal[randomid]);
 
 
     }

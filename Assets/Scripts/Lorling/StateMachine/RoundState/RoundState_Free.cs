@@ -15,7 +15,7 @@ public class RoundState_Free : RoundState
     public override void Exit() 
     {
         if (this.button != null) button.Exit();
-        stateMachine.SwitchState(typeof(RoundState_End));
+        stateMachine.SwitchState(typeof(RoundState_Effect));
     }
 
     public override void SetButton(ButtonUIBase button)

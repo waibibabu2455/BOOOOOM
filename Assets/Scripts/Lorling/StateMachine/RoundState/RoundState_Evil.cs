@@ -22,7 +22,7 @@ public class RoundState_Evil : RoundState
 
         // TODO::从事件池中读取事件
         int randomid = Random.Range(0, stateMachine.EventListBad.Count()-1);
-        stateMachine.EventListBad[randomid].effect();
+        stateMachine.EffectedEvent.Add(stateMachine.EventListBad[randomid]);
 
 
     }

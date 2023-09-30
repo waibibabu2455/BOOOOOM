@@ -11,6 +11,7 @@ public class RoundStateMachine : StateMachine
     public List<Event> EventListGood;
     public List<Event> EventListBad;
     public List<Event> EventListNormal;
+    public List<Event> EffectedEvent;
 
     private void Awake()
     {
