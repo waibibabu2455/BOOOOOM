@@ -36,6 +36,7 @@ public class EffectLibNormal : EffectLib
                 Debug.Log("case3normal");
                 return;
             case 4:
+
                 Debug.Log("case4normal");
                 return;
             case 5:
