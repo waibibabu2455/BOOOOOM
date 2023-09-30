@@ -11,15 +11,16 @@ public class RoundState_Free : RoundState
     public override void Enter()
     {
         base.Enter();
-    }
-
-    public override void Exit() 
-    {
         if (stateMachine.Player.canGoodEvent)
         {
             int randomid = Random.Range(0, stateMachine.EventListGood.Count() - 1);
             stateMachine.EffectedEvent.Add(stateMachine.EventListGood[randomid]);
         }
+    }
+
+    public override void Exit() 
+    {
+
         if (this.button != null) button.Exit();
         stateMachine.SwitchState(typeof(RoundState_Effect));
     }
