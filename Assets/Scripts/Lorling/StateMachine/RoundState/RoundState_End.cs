@@ -8,7 +8,7 @@ public class RoundState_End : RoundState
 {
     public override void Enter()
     {
-        PlayerAttribute.Instance.score -= PlayerAttribute.Instance.consume;
+        PlayerAttribute.Instance.score -= PlayerAttribute.Instance.consume-PlayerAttribute.Instance.getScore;
     }
 
     public override void Exit()
