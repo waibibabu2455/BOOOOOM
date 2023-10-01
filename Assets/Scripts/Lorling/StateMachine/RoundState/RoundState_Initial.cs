@@ -41,6 +41,7 @@ public class RoundState_Initial : RoundState
 
     public override void Exit()
     {
+
         stateMachine.SwitchState(typeof(RoundState_Evil));
     }
 

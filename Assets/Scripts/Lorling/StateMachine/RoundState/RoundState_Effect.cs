@@ -20,6 +20,7 @@ public class RoundState_Effect : RoundState
                 stateMachine.EffectedEvent.Remove(stateMachine.EffectedEvent[i]);
             }
         }
+
         stateMachine.SwitchState(typeof(RoundState_End));
     }
 }
