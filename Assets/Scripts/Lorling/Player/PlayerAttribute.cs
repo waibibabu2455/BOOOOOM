@@ -26,6 +26,8 @@ public class PlayerAttribute : MonoBehaviour
     [Header("好事件充能进度")]
     public int goodSchedule = 0;
 
+
+
     public bool canGoodEvent = false;
     // 每回合获得的有机质点数
     public double getScore => evolutionCount * (preyOn + compound);

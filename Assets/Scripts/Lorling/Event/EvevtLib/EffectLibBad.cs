@@ -22,7 +22,7 @@ public class EffectLibBad : EffectLib
             case 1:
                 foreach (Organ i in RoundStateMachine.Player.organList) {
                     if (i.OrganName=="叶绿体") {
-
+                        i.enable = false;
                     } 
                 }
                 Debug.Log("case1bad");

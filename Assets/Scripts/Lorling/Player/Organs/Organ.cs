@@ -10,6 +10,7 @@ public class Organ : MonoBehaviour
     public string Description;
     public int Refund;
     public OrganLib organLib;
+    public bool enable;
     public Organ(int Organid, string OrganName, int Complexity, string Description, int Refund, OrganLib organLib) { 
         this.Organid = Organid; 
         this.OrganName = OrganName;
@@ -17,6 +18,7 @@ public class Organ : MonoBehaviour
         this.Description = Description;
         this.Refund = Refund;
         this.organLib = organLib;
+        this.enable = true;
     }
 
     // Start is called before the first frame update
@@ -31,7 +33,10 @@ public class Organ : MonoBehaviour
         
     }
     public virtual void OrganEffect() {
-        organLib.effect(this.Organid);
+        if (enable)
+        {
+            organLib.effect(this.Organid);
+        }
     }
     
 }
