@@ -6,6 +6,11 @@ public class Opportunity : ButtonUIBase
 {
     public override void Click()
     {
+        sure.GetComponent<Sure>().SetAction(Func);
+    }
+
+    void Func()
+    {
         if (PlayerAttribute.Instance.canGoodEvent)
         {
             PlayerAttribute.Instance.canGoodEvent = false;

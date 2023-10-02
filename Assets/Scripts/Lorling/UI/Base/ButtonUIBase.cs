@@ -8,10 +8,12 @@ public class ButtonUIBase : UIBase
     protected Button button;
     [SerializeField] protected GameObject canvas;
     [SerializeField] protected RoundStateMachine machine;
+    protected GameObject sure;
 
     protected virtual void Awake()
     {
         button = GetComponent<Button>();
+        sure = GameObject.FindWithTag("Sure");
     }
 
     public virtual void Click()
