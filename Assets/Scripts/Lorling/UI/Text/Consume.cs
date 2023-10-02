@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Consume : TextUIBase
+﻿public class Consume : TextUIBase
 {
     protected override void DateUpdate()
     {
