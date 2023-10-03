@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Sure
+  - Info
   layers:
   - Default
   - TransparentFX

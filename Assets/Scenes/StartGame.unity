@@ -547,7 +547,7 @@ GameObject:
   - component: {fileID: 700558637}
   m_Layer: 5
   m_Name: Button (Legacy)
-  m_TagString: Untagged
+  m_TagString: Info
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -880,9 +880,12 @@ MonoBehaviour:
   preyOn: 1
   compound: 1
   organCount: 0
+  organList: []
   speed: 1
   evolutionCount: 1
   goodSchedule: 0
+  evolutionScore: 20
+  complexityMax: 20
   canGoodEvent: 0
 --- !u!1 &1189588390
 GameObject:
