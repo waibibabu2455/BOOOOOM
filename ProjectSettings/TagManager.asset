@@ -3,13 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - RoundManager
-  - Sure
-<<<<<<< HEAD
-=======
-  - Info
->>>>>>> Lorling
+  tags: []
   layers:
   - Default
   - TransparentFX
