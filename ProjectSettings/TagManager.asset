@@ -6,6 +6,10 @@ TagManager:
   tags:
   - RoundManager
   - Sure
+<<<<<<< HEAD
+=======
+  - Info
+>>>>>>> Lorling
   layers:
   - Default
   - TransparentFX

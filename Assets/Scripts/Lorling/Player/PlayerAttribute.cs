@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class PlayerAttribute : MonoBehaviour
@@ -25,9 +26,24 @@ public class PlayerAttribute : MonoBehaviour
     public int evolutionCount = 1;
     [Header("好事件充能进度")]
     public int goodSchedule = 0;
+    // 进化消耗
+    public int evolutionScore = 20;
+    // 复杂度最大上限
+    public int complexityMax = 20;
+    // 基础复杂度上限
+    public int baseComplexityMax
+    {
+        set
+        {
+            baseComplexityMax = math.min(baseComplexityMax, complexityMax);
+        }
+        get
+        {
+            return baseComplexityMax;
+        }
+    }
 
-
-
+    // 好事件是否充能完毕
     public bool canGoodEvent = false;
     // 每回合获得的有机质点数
     public double getScore => evolutionCount * (preyOn + compound);
