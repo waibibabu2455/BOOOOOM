@@ -6,6 +6,7 @@ TagManager:
   tags:
   - RoundManager
   - Sure
+  - Info
   layers:
   - Default
   - TransparentFX
