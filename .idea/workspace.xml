@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d19313d-3a99-448f-b130-3331e9a5d1ae" name="Changes" comment="123">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Database/Organ.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Database/Organ.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test-L.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test-L.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lorling/Player/Organs/OrganLib.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lorling/Player/Organs/OrganLib.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lorling/Player/PlayerAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lorling/Player/PlayerAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lorling/UI/Button/Gene/Variation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lorling/UI/Button/Gene/Variation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lorling/UI/Button/Population/Autophagy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lorling/UI/Button/Population/Autophagy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lorling/UI/Button/Population/Reproduction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lorling/UI/Button/Population/Reproduction.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

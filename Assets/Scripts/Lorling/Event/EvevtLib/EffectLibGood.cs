@@ -36,6 +36,25 @@ public class EffectLibGood : EffectLib
                 RoundStateMachine.Player.number *= 2;
                 Debug.Log("case5");
                 return;
-        }
+            case 6:
+                for (int i = 1; i <= 5; i++) {
+                    Organ organ = RoundStateMachine.OrganPool[Random.Range(0, RoundStateMachine.OrganPool.Count - 1)];
+                    RoundStateMachine.Player.organList.Add(organ);
+                }
+                return;
+            case 7:
+                RoundStateMachine.Player.number += 10;
+                return;
+            case 8:
+                RoundStateMachine.Player.preyOn += 8;
+                return;
+            case 9:
+                RoundStateMachine.Player.compound += 8;
+                return;
+            case 10:
+                RoundStateMachine.Player.score += 20;
+                return;
+        }     
+
     }
 }

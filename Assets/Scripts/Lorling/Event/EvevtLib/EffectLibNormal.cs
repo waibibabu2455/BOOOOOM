@@ -70,6 +70,41 @@ public class EffectLibNormal : EffectLib
                 this.RoundStateMachine.Player.preyOn -= 3;
                 Debug.Log("case10normal");
                 return;
+            case 11:
+                this.RoundStateMachine.Player.preyOn -= 3;
+                return;
+            case 12:
+                this.RoundStateMachine.Player.number -= 1;
+                return;
+            case 13:
+                this.RoundStateMachine.Player.preyOn += 3;
+                return;
+            case 14:
+                this.RoundStateMachine.Player.compound -= 2;
+                return;
+            case 15:
+                this.RoundStateMachine.Player.compound += 2;
+                return;
+            case 16:
+                this.RoundStateMachine.Player.varconsume += 1;
+                return;
+            case 17:
+                if (this.RoundStateMachine.Player.speed > 5) {
+                    this.RoundStateMachine.Player.number -= 2;
+                }
+                this.RoundStateMachine.Player.number -= 3;
+                return;
+            case 18:
+                this.RoundStateMachine.Player.number -=1;
+                this.RoundStateMachine.Player.score += 10;
+                return;
+            case 19:
+                this.RoundStateMachine.Player.number +=1;
+                this.RoundStateMachine.Player.score -= 5;
+                return;
+            case 20:
+                this.RoundStateMachine.Player.compound-=1;
+                return;
         }
     }
 }

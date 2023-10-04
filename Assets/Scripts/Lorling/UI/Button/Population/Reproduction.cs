@@ -11,9 +11,9 @@ public class Reproduction : ButtonUIBase
 
     void Func()
     {
-        if (PlayerAttribute.Instance.score >= PlayerAttribute.Instance.fat * 2)
+        if (PlayerAttribute.Instance.score >= PlayerAttribute.Instance.number)
         {
-            PlayerAttribute.Instance.score -= PlayerAttribute.Instance.fat * 2;
+            PlayerAttribute.Instance.score -= PlayerAttribute.Instance.number+PlayerAttribute.Instance.reproductionvalue;
             PlayerAttribute.Instance.number++;
         }
     }

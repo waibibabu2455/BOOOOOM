@@ -13,8 +13,15 @@ public class Autophagy : ButtonUIBase
     {
         if (PlayerAttribute.Instance.number > 1)
         {
-            PlayerAttribute.Instance.number--;
-            PlayerAttribute.Instance.score += PlayerAttribute.Instance.fat;
+            if (PlayerAttribute.Instance.fat >= PlayerAttribute.Instance.number)
+            {
+                PlayerAttribute.Instance.number -= 1;
+                PlayerAttribute.Instance.score += PlayerAttribute.Instance.number;
+            }
+            else {
+                PlayerAttribute.Instance.number -= 1;
+                PlayerAttribute.Instance.score += PlayerAttribute.Instance.fat;
+            }
         }
     }
 }

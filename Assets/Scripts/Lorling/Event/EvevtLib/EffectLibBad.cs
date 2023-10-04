@@ -44,6 +44,23 @@ public class EffectLibBad : EffectLib
                 RoundStateMachine.Player.number +=1;
                 Debug.Log("case5bad");
                 return;
+            case 6:
+                RoundStateMachine.Player.number -= 5;
+                Debug.Log("case6bad");
+                return;
+            case 7:
+                RoundStateMachine.Player.preyOn *=0.5;
+                return; 
+            case 8:
+                RoundStateMachine.Player.compound *= 0.5;
+                return;
+            case 9:
+                RoundStateMachine.Player.compound *= 0.5;
+                RoundStateMachine.Player.preyOn *= 0.5;
+                return;
+            case 10:
+                RoundStateMachine.Player.score -= 10;
+                return;
         }
     }
 }
