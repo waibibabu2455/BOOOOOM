@@ -19,6 +19,7 @@ public class Recovery: ButtonUIBase
             { 
                 GameObject neworganbutton=Instantiate(neworganButton);
                 neworganbutton.GetComponentInChildren<OrganButton>().Organ = i;
+                neworganbutton.GetComponentInChildren<Text>().text = i.OrganName;
                
             }
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RoundStateMachine : StateMachine
 {
@@ -13,6 +14,7 @@ public class RoundStateMachine : StateMachine
     public List<Event> EventListNormal;
     public List<Event> EffectedEvent;
     public List<Organ> OrganPool;
+    public Text infotext;
 
     private void Awake()
     {
@@ -29,21 +31,21 @@ public class RoundStateMachine : StateMachine
         for (int i = 1; i <= ReadCsv("Assets/Resources/Database/Normal.csv").Count - 1; i++)
         {
             string[] eventstring = ReadCsv("Assets/Resources/Database/Normal.csv")[i];
-            Event GeneratedEvent = new Event(System.Int32.Parse(eventstring[0]), eventstring[1], effectLibNormal, System.Int32.Parse(eventstring[4]));
+            Event GeneratedEvent = new Event(System.Int32.Parse(eventstring[0]), eventstring[1], eventstring[2], effectLibNormal, System.Int32.Parse(eventstring[4]));
             EventListNormal.Add(GeneratedEvent);
         }
         EffectLibGood effectLibGood = new EffectLibGood(this);
         for (int i = 1; i <= ReadCsv("Assets/Resources/Database/Good.csv").Count - 1; i++)
         {
             string[] eventstring = ReadCsv("Assets/Resources/Database/Good.csv")[i];
-            Event GeneratedEvent = new Event(System.Int32.Parse(eventstring[0]), eventstring[1], effectLibGood, System.Int32.Parse(eventstring[4]));
+            Event GeneratedEvent = new Event(System.Int32.Parse(eventstring[0]), eventstring[1], eventstring[2], effectLibGood, System.Int32.Parse(eventstring[4]));
             EventListGood.Add(GeneratedEvent);
         }
         EffectLibBad effectLibBad = new EffectLibBad(this);
         for (int i = 1; i <= ReadCsv("Assets/Resources/Database/Bad.csv").Count - 1; i++)
         {
             string[] eventstring = ReadCsv("Assets/Resources/Database/Bad.csv")[i];
-            Event GeneratedEvent = new Event(System.Int32.Parse(eventstring[0]), eventstring[1], effectLibBad, System.Int32.Parse(eventstring[4]));
+            Event GeneratedEvent = new Event(System.Int32.Parse(eventstring[0]), eventstring[1], eventstring[2], effectLibBad, System.Int32.Parse(eventstring[4]));
             EventListBad.Add(GeneratedEvent);
         }
         OrganLib organLib = new OrganLib();
@@ -52,6 +54,7 @@ public class RoundStateMachine : StateMachine
             string[] eventstring = ReadCsv("Assets/Resources/Database/Organ.csv")[i];
             Organ organ=new Organ(System.Int32.Parse(eventstring[0]), eventstring[1], System.Int32.Parse(eventstring[2]), eventstring[3], System.Int32.Parse(eventstring[5]),organLib);
             OrganPool.Add(organ);
+
         }
     }
 

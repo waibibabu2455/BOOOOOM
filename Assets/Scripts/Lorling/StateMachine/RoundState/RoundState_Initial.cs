@@ -32,7 +32,10 @@ public class RoundState_Initial : RoundState
             int randomid = Random.Range(0, stateMachine.EventListNormal.Count() - 1);
             if (stateMachine.EffectedEvent.Contains(stateMachine.EventListNormal[randomid]) == false)
             {
-                stateMachine.EffectedEvent.Add(stateMachine.EventListNormal[randomid]);
+                Event normalevent=stateMachine.EventListNormal[randomid];
+                stateMachine.EffectedEvent.Add(normalevent);
+                stateMachine.infotext.text = normalevent.eventname + ": " + normalevent.description;
+                stateMachine.infotext.gameObject.SetActive(true);
             }
             eventCount-=1;
         }

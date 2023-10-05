@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,7 +16,9 @@ public class Variation : ButtonUIBase
             neworgan.enable = true;
             PlayerAttribute.Instance.complexity += neworgan.Complexity;
             neworgan.OrganEffect();
-            Debug.Log(neworgan.OrganName);
+            machine.infotext.text = "获得"+neworgan.OrganName;
+            machine.infotext.gameObject.SetActive(true);
+        Debug.Log(neworgan.OrganName);
 
     }
 }
