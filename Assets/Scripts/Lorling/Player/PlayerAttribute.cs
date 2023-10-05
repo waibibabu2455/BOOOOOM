@@ -48,9 +48,9 @@ public class PlayerAttribute : MonoBehaviour
     // 每回合获得的有机质点数
     public double getScore => evolutionCount * (preyOn + compound);
     // 消耗点数
-    public double consume => evolutionCount * ((double)speed / 2 + complexity) + varconsume;
+    public double consume => ((evolutionCount+1) * ((double)speed + complexity))/2 + varconsume;
     // 复杂度
-    public int complexity => organCount;
+    public int complexity;
     // 脂肪
     public int fat => evolutionCount+ varfat;
 

@@ -12,16 +12,11 @@ public class Variation : ButtonUIBase
     void Func()
     { 
         Organ neworgan = machine.OrganPool[Random.Range(0,machine.OrganPool.Count-1)];
-        if (PlayerAttribute.Instance.organList.Contains(neworgan) == false)
-        {
             PlayerAttribute.Instance.organList.Add(neworgan);
             neworgan.enable = true;
+            PlayerAttribute.Instance.complexity += neworgan.Complexity;
             neworgan.OrganEffect();
             Debug.Log(neworgan.OrganName);
-        }
-        else
-        {
-            Func();
-        }
+
     }
 }
