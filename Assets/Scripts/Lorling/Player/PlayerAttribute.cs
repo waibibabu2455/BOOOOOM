@@ -66,4 +66,21 @@ public class PlayerAttribute : MonoBehaviour
 
         DontDestroyOnLoad(this);
     }
+
+    public void Reset()
+    {
+        raceName = "咕舟";
+        score = 10;
+        number = 10;
+        preyOn = 1;
+        compound = 1;
+        organCount = 0;
+        organList.Clear();
+        speed = 1;
+        evolutionCount = 1;
+        goodSchedule = 0;
+        evolutionScore = 20;
+        complexityMax = 20;
+        canGoodEvent = false;
+    }
 }
