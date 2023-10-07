@@ -2339,7 +2339,9 @@ MonoBehaviour:
   evolutionScore: 20
   complexityMax: 20
   canGoodEvent: 0
+  complexity: 0
   varfat: 0
+  varconsume: 0
   reproductionvalue: 0
 --- !u!1 &877606761
 GameObject:
@@ -2463,6 +2465,7 @@ MonoBehaviour:
   EventListNormal: []
   EffectedEvent: []
   OrganPool: []
+  infotext: {fileID: 999972479}
 --- !u!4 &938829115
 Transform:
   m_ObjectHideFlags: 0
