@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OrganButton : ButtonUIBase
+public class OrganButtonSRC : ButtonUIBase
 {
     public Organ Organ;
-    public OrganButton(Organ organ) { 
+    public OrganButtonSRC(Organ organ) { 
         this.Organ = organ;
     }
     public override void Click() {

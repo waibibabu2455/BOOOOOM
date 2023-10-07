@@ -10,7 +10,14 @@ public class Variation : ButtonUIBase
     }
 
     void Func()
-    { 
+    {
+        if (GameObject.FindObjectsOfType<OrganButtonSRC>() != null)
+        {
+            foreach (OrganButtonSRC o in GameObject.FindObjectsOfType<OrganButtonSRC>())
+            {
+                o.gameObject.SetActive(false);
+            }
+        }
         Organ neworgan = machine.OrganPool[Random.Range(0,machine.OrganPool.Count-1)];
             PlayerAttribute.Instance.organList.Add(neworgan);
             neworgan.enable = true;
