@@ -14,6 +14,7 @@ public class Sure : ButtonUIBase
             action();
             action = null;
         }
+
     }
 
     public void SetAction(Action action)

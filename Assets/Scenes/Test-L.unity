@@ -2339,6 +2339,10 @@ MonoBehaviour:
   evolutionScore: 20
   complexityMax: 20
   canGoodEvent: 0
+  complexity: 0
+  varfat: 0
+  varconsume: 0
+  reproductionvalue: 0
 --- !u!1 &877606761
 GameObject:
   m_ObjectHideFlags: 0
@@ -2461,6 +2465,7 @@ MonoBehaviour:
   EventListNormal: []
   EffectedEvent: []
   OrganPool: []
+  infotext: {fileID: 999972479}
 --- !u!4 &938829115
 Transform:
   m_ObjectHideFlags: 0
@@ -3676,7 +3681,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u66F4\u66FF"
+  m_Text: "\u663E\u793A"
 --- !u!222 &1374267802
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4152,6 +4157,7 @@ GameObject:
   - component: {fileID: 1552849345}
   - component: {fileID: 1552849344}
   - component: {fileID: 1552849343}
+  - component: {fileID: 1552849346}
   m_Layer: 5
   m_Name: Recovery
   m_TagString: Untagged
@@ -4223,7 +4229,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1552849344}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1552849346}
+        m_TargetAssemblyTypeName: Recovery, Assembly-CSharp
+        m_MethodName: Click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1552849344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4262,6 +4280,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1552849341}
   m_CullTransparentMesh: 1
+--- !u!114 &1552849346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552849341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16ea05e1f6fcf2e4cac032719624c52a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  machine: {fileID: 0}
+  neworganButton: {fileID: 5337455648701270757, guid: c957286bed676084198c3455767c6212, type: 3}
 --- !u!1 &1601298434
 GameObject:
   m_ObjectHideFlags: 0
@@ -5474,6 +5507,7 @@ GameObject:
   - component: {fileID: 1850368406}
   - component: {fileID: 1850368405}
   - component: {fileID: 1850368404}
+  - component: {fileID: 1850368407}
   m_Layer: 5
   m_Name: Replace
   m_TagString: Untagged
@@ -5545,7 +5579,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1850368405}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1850368407}
+        m_TargetAssemblyTypeName: Replace, Assembly-CSharp
+        m_MethodName: Click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1850368405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5584,6 +5630,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1850368402}
   m_CullTransparentMesh: 1
+--- !u!114 &1850368407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850368402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0529efa5cb6e1748b22c75cc139bd51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  machine: {fileID: 938829114}
+  neworganButton: {fileID: 5337455648701270757, guid: c957286bed676084198c3455767c6212, type: 3}
 --- !u!1 &1885874491
 GameObject:
   m_ObjectHideFlags: 0
@@ -6227,6 +6288,7 @@ GameObject:
   - component: {fileID: 2110560723}
   - component: {fileID: 2110560722}
   - component: {fileID: 2110560721}
+  - component: {fileID: 2110560724}
   m_Layer: 5
   m_Name: Variation
   m_TagString: Untagged
@@ -6298,7 +6360,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2110560722}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2110560724}
+        m_TargetAssemblyTypeName: Variation, Assembly-CSharp
+        m_MethodName: Click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2110560722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6337,6 +6411,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2110560719}
   m_CullTransparentMesh: 1
+--- !u!114 &2110560724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110560719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e81c3884e4bf5d4e9434ab8449b8705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  machine: {fileID: 938829114}
 --- !u!1 &2112657081
 GameObject:
   m_ObjectHideFlags: 0

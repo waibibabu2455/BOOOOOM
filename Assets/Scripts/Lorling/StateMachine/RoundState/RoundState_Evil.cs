@@ -23,7 +23,10 @@ public class RoundState_Evil : RoundState
         if (randomproperty >= 90)
         {
             int randomid = Random.Range(0, stateMachine.EventListBad.Count() - 1);
-            stateMachine.EffectedEvent.Add(stateMachine.EventListBad[randomid]);
+            Event evilevent=stateMachine.EventListBad[randomid];
+            stateMachine.EffectedEvent.Add(evilevent);
+            stateMachine.infotext.text = evilevent.eventname + ": " + evilevent.description;
+            stateMachine.infotext.gameObject.SetActive(true);
         }
 
 
