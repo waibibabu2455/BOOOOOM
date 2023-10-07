@@ -7,6 +7,10 @@ public class Autophagy : ButtonUIBase
     public override void Click()
     {
         sure.GetComponent<Sure>().SetAction(Func);
+        string s = "种群数量减1\n";
+        s += "有机质点数增加";
+        s += PlayerAttribute.Instance.fat.ToString();
+        info.text = s;
     }
 
     public void Func()
