@@ -15,8 +15,11 @@ public class ButtonUIBase : UIBase
     {
         button = GetComponent<Button>();
         sure = GameObject.FindWithTag("Sure");
-        info = GameObject.FindWithTag("Info").GetComponent<Text>();
-        info.text = "";
+        if (GameObject.FindWithTag("Info")!=null)
+        {
+            info = GameObject.FindWithTag("Info").GetComponent<Text>();
+        }
+        if(info!=null)info.text = "";
     }
 
     public virtual void Click()
