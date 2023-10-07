@@ -105,6 +105,103 @@ public class EffectLibNormal : EffectLib
             case 20:
                 this.RoundStateMachine.Player.compound-=1;
                 return;
+            case 21:
+                if (this.RoundStateMachine.Player.speed < 5)
+                {
+                    this.RoundStateMachine.Player.preyOn *= 0.5;
+                }
+                else {
+                    this.RoundStateMachine.Player.preyOn *= 2;
+                }
+                return;
+            case 22:
+                this.RoundStateMachine.Player.compound *= 2;
+                return;
+            case 23:
+                if (this.RoundStateMachine.Player.fat <= 10)
+                {
+                    this.RoundStateMachine.Player.compound /= 2;
+                }
+                else {
+                    this.RoundStateMachine.Player.compound *= 2;
+                }
+                return;
+            case 24:
+                this.RoundStateMachine.Player.preyOn /= 2;
+                this.RoundStateMachine.Player.compound /= 2;
+                this.RoundStateMachine.Player.score += 20;
+                return;
+            case 25:
+                this.RoundStateMachine.Player.preyOn /= 2;
+                return;
+            case 26:
+                this.RoundStateMachine.Player.preyOn *= 2;
+                return;
+            case 27:
+                this.RoundStateMachine.Player.number -= 5;
+                if (this.RoundStateMachine.Player.number < 1) {
+                    this.RoundStateMachine.Player.number = 1;
+                }
+                return;
+            case 28:
+                this.RoundStateMachine.Player.score += 10;
+                return;
+            case 29:
+                this.RoundStateMachine.Player.score -= 10;
+                this.RoundStateMachine.Player.preyOn *= 2;
+                return;
+            case 30:
+                this.RoundStateMachine.Player.preyOn /= 2;
+                this.RoundStateMachine.Player.number *= 1.1;
+                return;
+            case 31:
+                this.RoundStateMachine.Player.number -= 1;
+                if (this.RoundStateMachine.Player.number < 1) {
+                    this.RoundStateMachine.Player.number = 1;
+                }
+                return;
+            case 32:
+                this.RoundStateMachine.Player.score *= 0.8;
+                return;
+            case 33:
+                this.RoundStateMachine.Player.score *= 1.2;
+                return;
+            case 34:
+                this.RoundStateMachine.Player.score *= 0.95;
+                this.RoundStateMachine.Player.preyOn *= 2;
+                return;
+            case 35:
+                this.RoundStateMachine.Player.score *= 0.9;
+                this.RoundStateMachine.Player.number -= 1;
+                return;
+            case 36:
+                if (this.RoundStateMachine.Player.speed > 5) {
+                    this.RoundStateMachine.Player.score *= 0.9;
+                }
+                else {
+                    this.RoundStateMachine.Player.score *= 0.8;
+                }
+                return;
+            case 37:
+                if (this.RoundStateMachine.Player.speed > 5)
+                {
+                    this.RoundStateMachine.Player.preyOn *= 2;
+                }
+                if (this.RoundStateMachine.Player.speed > 10) {
+                    this.RoundStateMachine.Player.preyOn *= 4;
+                }
+                return;
+            case 38:
+                if (this.RoundStateMachine.Player.fat <= 5) {
+                    this.RoundStateMachine.Player.preyOn = 0;
+                }
+                return;
+            case 39:
+                this.RoundStateMachine.Player.varconsume -= 5;
+                return;
+            case 40:
+                this.RoundStateMachine.Player.varconsume += 5;
+                return;
         }
     }
 }
