@@ -71,7 +71,7 @@ public class RoundStateMachine : StateMachine
 
     private void OnGUI()
     {
-        GUI.Box(new Rect(400, 10, 250, 30), currentState.ToString());
+        //GUI.Box(new Rect(400, 10, 250, 30), currentState.ToString());
     }
 
     public bool IsFree()
@@ -103,5 +103,15 @@ public class RoundStateMachine : StateMachine
         stream.Close();
         stream.Dispose();
         return list;
+    }
+
+    public string GetCurrentState()
+    {
+        return currentState.ToString();
+    }
+
+    public RoundState GetCurrentRoundState()
+    {
+        return currentState;
     }
 }

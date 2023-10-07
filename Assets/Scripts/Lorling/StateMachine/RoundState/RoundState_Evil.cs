@@ -7,12 +7,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "RoundState_Evil", menuName = "Data/StateMachine/RoundState/RoundState_Evil")]
 public class RoundState_Evil : RoundState
 {
-    bool isAppear;
     int random;
 
     public override void Enter()
     {   
-
         // 好事件充能
         random = Mathf.Abs((int)Random.value % 10);
         PlayerAttribute.Instance.goodSchedule = Mathf.Min(100, PlayerAttribute.Instance.goodSchedule + ((random == 0) ? 10 : 0));
