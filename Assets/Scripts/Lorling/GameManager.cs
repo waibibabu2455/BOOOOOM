@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
         }
 
         // 胜利
-        if(PlayerAttribute.Instance.number > 40 || PlayerAttribute.Instance.evolutionCount >= 4)
+        if(PlayerAttribute.Instance.number > 40 || PlayerAttribute.Instance.evolutionCount >= 4 || PlayerAttribute.Instance.roundCount >= 100)
         {
             SceneManager.LoadScene(3);
         }

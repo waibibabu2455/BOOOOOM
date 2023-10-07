@@ -53,6 +53,8 @@ public class PlayerAttribute : MonoBehaviour
     public int complexity;
     // 脂肪
     public int fat => evolutionCount+ varfat;
+    // 回合数
+    public int roundCount = 0;
 
     public int varfat;
     public int varconsume;

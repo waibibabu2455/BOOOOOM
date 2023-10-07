@@ -13,6 +13,7 @@ public class RoundState_End : RoundState
 
     public override void Exit()
     {
+        PlayerAttribute.Instance.roundCount++;
         stateMachine.SwitchState(typeof(RoundState_Initial));
     }
 
