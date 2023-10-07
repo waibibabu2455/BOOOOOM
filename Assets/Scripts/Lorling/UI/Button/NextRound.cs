@@ -14,6 +14,13 @@ public class NextRound : ButtonUIBase
 
     public override void Click()
     {
+        if (GameObject.FindObjectsOfType<OrganButtonSRC>() != null)
+        {
+            foreach (OrganButtonSRC o in GameObject.FindObjectsOfType<OrganButtonSRC>())
+            {
+                o.gameObject.SetActive(false);
+            }
+        }
         stateManager.GetComponent<RoundStateMachine>().NextRound();
     }
 }
