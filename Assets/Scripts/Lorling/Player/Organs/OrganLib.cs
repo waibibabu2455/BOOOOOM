@@ -115,6 +115,78 @@ public class OrganLib : MonoBehaviour
             case 31:
                 PlayerAttribute.Instance.compound += PlayerAttribute.Instance.organList.Count;
                 return;
+            case 32:
+                PlayerAttribute.Instance.complexityMax += 20;
+                return;
+            case 33:
+                PlayerAttribute.Instance.complexityMax += 20;
+                return;
+            case 34:
+                PlayerAttribute.Instance.compound += 12;
+                PlayerAttribute.Instance.preyOn += 6;
+                PlayerAttribute.Instance.varfat += 4;
+                return;
+            case 35:
+                PlayerAttribute.Instance.compound+= PlayerAttribute.Instance.organList.Count;
+                PlayerAttribute.Instance.speed += 4;
+                PlayerAttribute.Instance.varfat += 8;
+                return;
+            case 36:
+                PlayerAttribute.Instance.preyOn += 16;
+                PlayerAttribute.Instance.speed += 8;
+                PlayerAttribute.Instance.varfat += 4;
+                return;
+            case 37:
+                PlayerAttribute.Instance.preyOn += 24;
+                PlayerAttribute.Instance.varfat += 4;
+                return;
+            case 38:
+                PlayerAttribute.Instance.preyOn += 16;
+                PlayerAttribute.Instance.compound += 16;
+                return;
+            case 39:
+                PlayerAttribute.Instance.preyOn += 18;
+                PlayerAttribute.Instance.varfat += 8;
+                return;
+            case 40:
+                PlayerAttribute.Instance.compound += 14;
+                PlayerAttribute.Instance.preyOn += 6;
+                return;
+            case 41:
+                PlayerAttribute.Instance.compound += 14;
+                PlayerAttribute.Instance.preyOn += 6;
+                return;
+            case 42:
+                PlayerAttribute.Instance.preyOn += 18;
+                PlayerAttribute.Instance.compound += 14;
+                return;
+            case 43:
+                PlayerAttribute.Instance.compound += 16;
+                PlayerAttribute.Instance.speed += 4;
+                return;
+            case 44:
+                PlayerAttribute.Instance.varconsume -= 5;
+                return;
+            case 45:
+                PlayerAttribute.Instance.complexityMax += 10;
+                PlayerAttribute.Instance.varfat += 4;
+                return;
+            case 46:
+                PlayerAttribute.Instance.compound += PlayerAttribute.Instance.organList.Count;
+                PlayerAttribute.Instance.preyOn += PlayerAttribute.Instance.organList.Count;
+                return;
+            case 47:
+                PlayerAttribute.Instance.compound += 3 * PlayerAttribute.Instance.organList.Count;
+                return;
+            case 48:
+                PlayerAttribute.Instance.speed += PlayerAttribute.Instance.organList.Count;
+                PlayerAttribute.Instance.varfat += PlayerAttribute.Instance.organList.Count;
+                return;
+            case 49:
+                PlayerAttribute.Instance.preyOn += PlayerAttribute.Instance.organList.Count;
+                return;
+            case 50:
+                return;
         }
     }
 }
