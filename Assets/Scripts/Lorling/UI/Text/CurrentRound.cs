@@ -1,4 +1,4 @@
-using System.Collections;
+锘縰sing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,25 +18,25 @@ public class CurrentRound : TextUIBase
         switch (stateMachine.GetCurrentRoundState())
         {
             case RoundState_Evil:
-                s = "恶魔";
+                s = "鎭堕瓟";
                 break;
             case RoundState_End:
-                s = "结束";
+                s = "缁撴潫";
                 break;
             case RoundState_Free:
-                s = "自由";
+                s = "鑷敱";
                 break;
             case RoundState_Initial:
-                s = "初始";
+                s = "鍒濆";
                 break;
             case RoundState_Produce:
-                s = "生产";
+                s = "鐢熶骇";
                 break;
             default :
-                s = "过渡";
+                s = "杩囨浮";
                 break;
         }
-        s += "阶段";
+        s += "闃舵";
         text.text = s;
     }
 }
