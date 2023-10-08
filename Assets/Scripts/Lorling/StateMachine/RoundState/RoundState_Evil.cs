@@ -13,8 +13,8 @@ public class RoundState_Evil : RoundState
     {   
         // 好事件充能
         random = Mathf.Abs((int)Random.value % 10);
-        //PlayerAttribute.Instance.goodSchedule = Mathf.Min(100, PlayerAttribute.Instance.goodSchedule + ((random == 0) ? 10 : 0));
-        PlayerAttribute.Instance.goodSchedule += 1;
+        PlayerAttribute.Instance.goodSchedule = Mathf.Min(100, PlayerAttribute.Instance.goodSchedule + ((random == 0) ? 10 : 0));
+        //PlayerAttribute.Instance.goodSchedule += 1;
         PlayerAttribute.Instance.canGoodEvent = PlayerAttribute.Instance.goodSchedule == 100;
 
         // TODO::从事件池中读取事件
