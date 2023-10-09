@@ -10,10 +10,10 @@ public class RoundState_Evil : RoundState
     int random;
 
     public override void Enter()
-    {   
+    {
         // 好事件充能
-        random = Mathf.Abs((int)Random.value % 10);
-        PlayerAttribute.Instance.goodSchedule = Mathf.Min(100, PlayerAttribute.Instance.goodSchedule + ((random == 0) ? 10 : 0));
+        random = Random.Range(0, 10);
+        PlayerAttribute.Instance.goodSchedule = Mathf.Min(100, PlayerAttribute.Instance.goodSchedule + ((random <= 6) ? 10 : 0));
         //PlayerAttribute.Instance.goodSchedule += 1;
         PlayerAttribute.Instance.canGoodEvent = PlayerAttribute.Instance.goodSchedule == 100;
 

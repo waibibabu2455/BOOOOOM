@@ -7,6 +7,14 @@ public class Opportunity : ButtonUIBase
     public override void Click()
     {
         sure.GetComponent<Sure>().SetAction(Func);
+        if (!PlayerAttribute.Instance.canGoodEvent)
+        {
+            info.text = "你现在还不能召唤天使骰子";
+        }
+        else
+        {
+            info.text = "你确定要现在召唤天使骰子吗？";
+        }
     }
 
     void Func()
