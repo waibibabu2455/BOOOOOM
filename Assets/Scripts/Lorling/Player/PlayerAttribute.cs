@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
@@ -58,7 +59,8 @@ public class PlayerAttribute : MonoBehaviour
 
     public int varfat;
     public int varconsume;
-    public double reproductionvalue;
+    public double reproductionvalue = 0;
+    public double reproductionValue => Math.Min(number, fat) + reproductionvalue;
 
     private void Awake()
     {

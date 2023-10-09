@@ -1,0 +1,4 @@
+repository "BOOOM 回合@booom-2023-10@cloud.cn"
+  path "/"
+    br "/main"
+    co "/main"
