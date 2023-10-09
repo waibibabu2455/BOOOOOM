@@ -1,4 +1,4 @@
-using System.Collections;
+锘縰sing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,8 +7,8 @@ public class Reproduction : ButtonUIBase
     public override void Click()
     {
         sure.GetComponent<Sure>().SetAction(Func);
-        string s = "有机质点数减少" + PlayerAttribute.Instance.reproductionvalue.ToString();
-        s += "\n种群数量加1";
+        string s = "绻佽鑺辫垂" + PlayerAttribute.Instance.reproductionvalue.ToString();
+        s += "\n绉嶆棌鏁伴噺澧炲姞1";
         info.text = s;
     }
 
