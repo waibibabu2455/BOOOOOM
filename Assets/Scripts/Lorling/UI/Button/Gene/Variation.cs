@@ -27,7 +27,7 @@ public class Variation : ButtonUIBase
             
         neworgan.OrganEffect();
             
-        machine.infotext.text = "获得"+neworgan.OrganName;
+        machine.infotext.text = "获得"+neworgan.OrganName+": \n"+neworgan.Description;
         machine.infotext.gameObject.SetActive(true);
         Debug.Log(neworgan.OrganName);
 

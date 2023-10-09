@@ -16,7 +16,7 @@ public class Replace : ButtonUIBase
         foreach (Organ i in machine.Player.organList) {
             GameObject showbutton = Instantiate(neworganButton);
             showbutton.SetActive(true);
-            showbutton.GetComponentInChildren<OrganButtonSRC>().transform.SetPositionAndRotation(new Vector3(550, 200 + y * 30, 0), Quaternion.Euler(0, 0, 0));
+            showbutton.GetComponentInChildren<OrganButtonSRC>().transform.SetPositionAndRotation(new Vector3(550, 200 + y * 80, 0), Quaternion.Euler(0, 0, 0));
             showbutton.GetComponentInChildren<Text>().text = i.OrganName;
             showbutton.GetComponentInChildren<OrganButtonSRC>().enabled = false;
             showbutton.GetComponentInChildren<Button>().enabled = false;

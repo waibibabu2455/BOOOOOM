@@ -52,7 +52,7 @@ public class RoundStateMachine : StateMachine
         for (int i = 1; i <= ReadCsv("Database/Organ").Count - 1; i++)
         {
             string[] eventstring = ReadCsv("Database/Organ")[i];
-            Organ organ=new Organ(System.Int32.Parse(eventstring[0]), eventstring[1], System.Int32.Parse(eventstring[2]), eventstring[3], System.Int32.Parse(eventstring[5]),organLib);
+            Organ organ=new Organ(System.Int32.Parse(eventstring[0]), eventstring[1], System.Int32.Parse(eventstring[2]), eventstring[3] + "," + eventstring[4], System.Int32.Parse(eventstring[5]),organLib);
             OrganPool.Add(organ);
 
         }
