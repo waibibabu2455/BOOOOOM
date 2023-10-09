@@ -60,7 +60,7 @@ public class PlayerAttribute : MonoBehaviour
     public int varfat;
     public int varconsume;
     public double reproductionvalue = 0;
-    public double reproductionValue => Math.Min(number, fat) + reproductionvalue;
+    public double reproductionValue => Math.Max(number, fat) + reproductionvalue;
 
     private void Awake()
     {
