@@ -28,28 +28,28 @@ public class RoundStateMachine : StateMachine
 
         //事件池生成
         EffectLibNormal effectLibNormal = new EffectLibNormal(this);
-        for (int i = 1; i <= ReadCsv("Database/Normal").Count - 1; i++)
+        for (int i = 0; i <= ReadCsv("Database/Normal").Count - 1; i++)
         {
             string[] eventstring = ReadCsv("Database/Normal")[i];
             Event GeneratedEvent = new Event(System.Int32.Parse(eventstring[0]), eventstring[1], eventstring[2] +"," + eventstring[3], effectLibNormal, System.Int32.Parse(eventstring[4]));
             EventListNormal.Add(GeneratedEvent);
         }
         EffectLibGood effectLibGood = new EffectLibGood(this);
-        for (int i = 1; i <= ReadCsv("Database/Good").Count - 1; i++)
+        for (int i = 0; i <= ReadCsv("Database/Good").Count - 1; i++)
         {
             string[] eventstring = ReadCsv("Database/Good")[i];
             Event GeneratedEvent = new Event(System.Int32.Parse(eventstring[0]), eventstring[1], eventstring[2] + "," + eventstring[3], effectLibGood, System.Int32.Parse(eventstring[4]));
             EventListGood.Add(GeneratedEvent);
         }
         EffectLibBad effectLibBad = new EffectLibBad(this);
-        for (int i = 1; i <= ReadCsv("Database/Bad").Count - 1; i++)
+        for (int i = 0; i <= ReadCsv("Database/Bad").Count - 1; i++)
         {
             string[] eventstring = ReadCsv("Database/Bad")[i];
             Event GeneratedEvent = new Event(System.Int32.Parse(eventstring[0]), eventstring[1], eventstring[2] + "," + eventstring[3], effectLibBad, System.Int32.Parse(eventstring[4]));
             EventListBad.Add(GeneratedEvent);
         }
         OrganLib organLib = new OrganLib();
-        for (int i = 1; i <= ReadCsv("Database/Organ").Count - 1; i++)
+        for (int i = 0; i <= ReadCsv("Database/Organ").Count - 1; i++)
         {
             string[] eventstring = ReadCsv("Database/Organ")[i];
             Organ organ=new Organ(System.Int32.Parse(eventstring[0]), eventstring[1], System.Int32.Parse(eventstring[2]), eventstring[3] + "," + eventstring[4], System.Int32.Parse(eventstring[5]),organLib);
