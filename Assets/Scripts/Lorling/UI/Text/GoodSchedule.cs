@@ -14,7 +14,7 @@ public class GoodSchedule : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     private void Update()
     {
-        image.fillAmount = (float)PlayerAttribute.Instance.goodSchedule / 10;
+        image.fillAmount = (float)PlayerAttribute.Instance.goodSchedule / 100;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
