@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -15,6 +16,7 @@ public class RoundState_End : RoundState
     {
         PlayerAttribute.Instance.roundCount++;
         stateMachine.SwitchState(typeof(RoundState_Initial));
+        PlayerAttribute.Instance.number = Math.Ceiling(PlayerAttribute.Instance.number);
     }
 
 }
