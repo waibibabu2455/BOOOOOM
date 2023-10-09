@@ -28,30 +28,30 @@ public class RoundStateMachine : StateMachine
 
         //事件池生成
         EffectLibNormal effectLibNormal = new EffectLibNormal(this);
-        for (int i = 1; i <= ReadCsv("Assets/Resources/Database/Normal.csv").Count - 1; i++)
+        for (int i = 1; i <= ReadCsv("Database/Normal").Count - 1; i++)
         {
-            string[] eventstring = ReadCsv("Assets/Resources/Database/Normal.csv")[i];
-            Event GeneratedEvent = new Event(System.Int32.Parse(eventstring[0]), eventstring[1], eventstring[2], effectLibNormal, System.Int32.Parse(eventstring[4]));
+            string[] eventstring = ReadCsv("Database/Normal")[i];
+            Event GeneratedEvent = new Event(System.Int32.Parse(eventstring[0]), eventstring[1], eventstring[2] +"," + eventstring[3], effectLibNormal, System.Int32.Parse(eventstring[4]));
             EventListNormal.Add(GeneratedEvent);
         }
         EffectLibGood effectLibGood = new EffectLibGood(this);
-        for (int i = 1; i <= ReadCsv("Assets/Resources/Database/Good.csv").Count - 1; i++)
+        for (int i = 1; i <= ReadCsv("Database/Good").Count - 1; i++)
         {
-            string[] eventstring = ReadCsv("Assets/Resources/Database/Good.csv")[i];
-            Event GeneratedEvent = new Event(System.Int32.Parse(eventstring[0]), eventstring[1], eventstring[2], effectLibGood, System.Int32.Parse(eventstring[4]));
+            string[] eventstring = ReadCsv("Database/Good")[i];
+            Event GeneratedEvent = new Event(System.Int32.Parse(eventstring[0]), eventstring[1], eventstring[2] + "," + eventstring[3], effectLibGood, System.Int32.Parse(eventstring[4]));
             EventListGood.Add(GeneratedEvent);
         }
         EffectLibBad effectLibBad = new EffectLibBad(this);
-        for (int i = 1; i <= ReadCsv("Assets/Resources/Database/Bad.csv").Count - 1; i++)
+        for (int i = 1; i <= ReadCsv("Database/Bad").Count - 1; i++)
         {
-            string[] eventstring = ReadCsv("Assets/Resources/Database/Bad.csv")[i];
-            Event GeneratedEvent = new Event(System.Int32.Parse(eventstring[0]), eventstring[1], eventstring[2], effectLibBad, System.Int32.Parse(eventstring[4]));
+            string[] eventstring = ReadCsv("Database/Bad")[i];
+            Event GeneratedEvent = new Event(System.Int32.Parse(eventstring[0]), eventstring[1], eventstring[2] + "," + eventstring[3], effectLibBad, System.Int32.Parse(eventstring[4]));
             EventListBad.Add(GeneratedEvent);
         }
         OrganLib organLib = new OrganLib();
-        for (int i = 1; i <= ReadCsv("Assets/Resources/Database/Organ.csv").Count - 1; i++)
+        for (int i = 1; i <= ReadCsv("Database/Organ").Count - 1; i++)
         {
-            string[] eventstring = ReadCsv("Assets/Resources/Database/Organ.csv")[i];
+            string[] eventstring = ReadCsv("Database/Organ")[i];
             Organ organ=new Organ(System.Int32.Parse(eventstring[0]), eventstring[1], System.Int32.Parse(eventstring[2]), eventstring[3], System.Int32.Parse(eventstring[5]),organLib);
             OrganPool.Add(organ);
 
@@ -83,26 +83,18 @@ public class RoundStateMachine : StateMachine
     {
         currentState.SetButton(button);
     }
-    private StreamReader Read(string path)
-    {
-        if (path == null)
-            return null;
-        if (!File.Exists(path))
-            File.CreateText(path);
-        return new StreamReader(path);
-    }
     public List<string[]> ReadCsv(string path)
     {
         List<string[]> list = new List<string[]>();
-        string line;
-        StreamReader stream = Read(path);
-        while ((line = stream.ReadLine()) != null)
+        TextAsset textAsset = Resources.Load<TextAsset>(path);
+        string[] data = textAsset.text.Split('\n');
+        for (int i = 1; i < data.Length - 1; i++)
         {
-            list.Add(line.Split(','));
+            string[] newevent = data[i].Split(',');
+            list.Add(newevent);
         }
-        stream.Close();
-        stream.Dispose();
         return list;
+        
     }
 
     public string GetCurrentState()

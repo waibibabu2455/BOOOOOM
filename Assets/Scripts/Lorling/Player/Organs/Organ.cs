@@ -38,5 +38,11 @@ public class Organ : MonoBehaviour
             organLib.effect(this.Organid);
         }
     }
+
+    public virtual void OrganreverseEffect() {
+        if (enable) { 
+            organLib.reverseeffect(this.Organid);
+        }
+    }
     
 }

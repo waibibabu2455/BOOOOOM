@@ -13,7 +13,10 @@ public class OrganButtonSRC : ButtonUIBase
     }
     public void func()
     {
+        Organ.OrganreverseEffect();
         PlayerAttribute.Instance.organList.Remove(Organ);
+        PlayerAttribute.Instance.complexity -= Organ.Complexity;
+        PlayerAttribute.Instance.score += Organ.Refund;
         Debug.Log("organ" + Organ.OrganName + "has been removed");
         Destroy(canvas);
     }

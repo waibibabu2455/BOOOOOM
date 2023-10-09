@@ -19,12 +19,16 @@ public class Variation : ButtonUIBase
             }
         }
         Organ neworgan = machine.OrganPool[Random.Range(0,machine.OrganPool.Count-1)];
-            PlayerAttribute.Instance.organList.Add(neworgan);
-            neworgan.enable = true;
-            PlayerAttribute.Instance.complexity += neworgan.Complexity;
-            neworgan.OrganEffect();
-            machine.infotext.text = "获得"+neworgan.OrganName;
-            machine.infotext.gameObject.SetActive(true);
+        PlayerAttribute.Instance.organList.Add(neworgan);
+        neworgan.enable = true;
+
+        PlayerAttribute.Instance.complexity += neworgan.Complexity;
+        PlayerAttribute.Instance.score -= 5;
+            
+        neworgan.OrganEffect();
+            
+        machine.infotext.text = "获得"+neworgan.OrganName;
+        machine.infotext.gameObject.SetActive(true);
         Debug.Log(neworgan.OrganName);
 
     }

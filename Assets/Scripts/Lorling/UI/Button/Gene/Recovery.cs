@@ -25,7 +25,7 @@ public class Recovery: ButtonUIBase
             foreach (Organ i in PlayerAttribute.Instance.organList)
             { 
                 GameObject neworganbutton=Instantiate(neworganButton);
-                neworganbutton.GetComponentInChildren<OrganButtonSRC>().transform.SetPositionAndRotation(new Vector3(550,200+y*30,0),Quaternion.Euler(0,0,0));
+                neworganbutton.GetComponentInChildren<OrganButtonSRC>().transform.SetPositionAndRotation(new Vector3(960,200+y*30,0),Quaternion.Euler(0,0,0));
                 neworganbutton.GetComponentInChildren<OrganButtonSRC>().Organ = i;
                 neworganbutton.GetComponentInChildren<Text>().text = i.OrganName;
                 y += 1;
